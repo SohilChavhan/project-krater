@@ -83,7 +83,7 @@ def calculate_repair_budget(district_name: str, num_potholes: int) -> dict:
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["http://localhost:5173", "https://project-krater-qhp8.vercel.app"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
