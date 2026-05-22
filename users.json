@@ -1,0 +1,111 @@
+{"users": [
+{
+  "localId": "5rrH9PUeayembxvzKSuibR4lOya2",
+  "email": "subzeroaura@krater.app",
+  "emailVerified": false,
+  "passwordHash": "hU6il0kquU0Ca+f5Q6NfThHTxBEm4VIG2hANhaioiZ1LLRNchVbsME1UFk6KobcAetZYk5I53Mcq3IBrshoCuA==",
+  "salt": "DcWiE3WLe0MLfA==",
+  "displayName": "SubZeroAura",
+  "lastSignedInAt": "1778410659356",
+  "createdAt": "1778324674681",
+  "providerUserInfo": []
+},
+{
+  "localId": "6CK48LjG9tT9lJ7lmBNkyzowvk32",
+  "email": "inspector1@krater.app",
+  "emailVerified": false,
+  "passwordHash": "W0rOiO97WzVa+UyMgCIBNn+GvuRvL1X2YBUqwMzLGCV9hpWM1CMDTZ/KU/3ixUjWRalK2h8vbhiqZJGwT/SEFA==",
+  "salt": "/RCRLrSw850iqQ==",
+  "displayName": "inspector1",
+  "lastSignedInAt": "1778415440380",
+  "createdAt": "1778351327609",
+  "providerUserInfo": []
+},
+{
+  "localId": "AvdQGxsiotdia37ViqvUfRWr3RG2",
+  "email": "sohil@krater.app",
+  "emailVerified": false,
+  "passwordHash": "XTTN85jbnZHVEC8iBPl0MARzp5QTLDxKlfelSVEte5b3rj1lR37A6MweFx9HAt2QIHP0RY8yC+D6MS0N06T5PA==",
+  "salt": "mxp0HnY0m41PtQ==",
+  "displayName": "Sohil",
+  "lastSignedInAt": "1778436672608",
+  "createdAt": "1777829921118",
+  "providerUserInfo": []
+},
+{
+  "localId": "EDDe1FCSUMd9Fb0px714UQZ8K9o2",
+  "email": "temp_user1@krater.app",
+  "emailVerified": false,
+  "passwordHash": "B2HAT9ad7fw6fohoK9aeHHGxoNE+5XNyHj6Ml/cU8l6PKZ0kcD6g34hr1o57sbA4tqEiE8w3Nq+zJqEeVAEzpQ==",
+  "salt": "V4AacVgtUHYXvA==",
+  "displayName": "temp_user1",
+  "lastSignedInAt": "1777811868813",
+  "createdAt": "1777811868813",
+  "providerUserInfo": []
+},
+{
+  "localId": "GYIRThZ4oSSxLlE7EIwxQoV2o4F2",
+  "email": "temp_user2@krater.app",
+  "emailVerified": false,
+  "passwordHash": "gTUjWe7IaxeVKdK1Eqs7w6Mk2fvXH3QED6wnduNHAcksrIMECxxgpt8TQMemewm37szQbM0F4FG6kd+XonrSIA==",
+  "salt": "vzdBQQJErCjKLQ==",
+  "displayName": "temp_user2",
+  "lastSignedInAt": "1777811916409",
+  "createdAt": "1777811916409",
+  "providerUserInfo": []
+},
+{
+  "localId": "QsMvJ46yvFRRCf7KvpBjommrqYd2",
+  "email": "cityinspector@krater.app",
+  "emailVerified": false,
+  "passwordHash": "U0TYS9HVtSc1QXNTHhwL9pwrZLEAZD6eIcjPjkW9THVZe9TW6Chuk2SY2iZORybZImwJ+lryaNvXnw8IDy9xAg==",
+  "salt": "m0n4jdjhqRX1OQ==",
+  "displayName": "cityinspector",
+  "lastSignedInAt": "1778339230542",
+  "createdAt": "1778339230542",
+  "providerUserInfo": []
+},
+{
+  "localId": "T4othCF5ljfpBeQRHFCle4xLL5g2",
+  "email": "zxcasd@krater.app",
+  "emailVerified": false,
+  "passwordHash": "f4iEePpghGzk08yMmV2ods7EJ48VuvEPgxRrjKRiJkAImntNqpupF0dfD/R1OVr45y/tXzUPZEe0SuKyW2qFzg==",
+  "salt": "1rTaDOrcM4hfQA==",
+  "displayName": "zxcasd",
+  "lastSignedInAt": "1778337812935",
+  "createdAt": "1778003256965",
+  "providerUserInfo": []
+},
+{
+  "localId": "c7FQPS5B0TSHXqhqhdznhZysjcf2",
+  "email": "twillight@krater.app",
+  "emailVerified": false,
+  "passwordHash": "W337Pcgy3wQBS96Cf6aL4rBLMDPlT81V9A7BdaXSfzbHRxz9ptFAMt3iLeLX4gUm3AP73dl0rtYzDp5Eys6isw==",
+  "salt": "h90QUH7YyuyD4g==",
+  "displayName": "Twillight",
+  "lastSignedInAt": "1778415379251",
+  "createdAt": "1777959532635",
+  "providerUserInfo": []
+},
+{
+  "localId": "qDLYVOfpsybGOqflSQD1YNOwyQx1",
+  "email": "zxczxc@krater.app",
+  "emailVerified": false,
+  "passwordHash": "dxO9BJdCjfp1V1Pfne19RvRCNfEPV34dOZdC81RRwQeK3iBRsG4p8tL2mDyTtPZgB6KJ4JPZ//GrcQQ069Iu9g==",
+  "salt": "uLS1f2mtKhYn6g==",
+  "displayName": "zxczxc",
+  "lastSignedInAt": "1778392595833",
+  "createdAt": "1777812538761",
+  "providerUserInfo": []
+},
+{
+  "localId": "vVmpXA4moWNomNLNJ0Ev1Ku3J6z1",
+  "email": "shoryaphucksurmom@krater.app",
+  "emailVerified": false,
+  "passwordHash": "I++gKBw/Nba1b1CdsW+E8cp+DTtgXK/Is1Oxm9IpjPukP+jfmZs6XcD8dSEF00Hp1dwQlveMNhbDhzN6Mh0pEQ==",
+  "salt": "2cKvD8NbREYcJg==",
+  "displayName": "Shoryaphucksurmom",
+  "lastSignedInAt": "1777915952052",
+  "createdAt": "1777824438254",
+  "providerUserInfo": []
+}]}

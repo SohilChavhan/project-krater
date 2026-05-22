@@ -1,0 +1,380 @@
+/* Inspector Dashboard - Full Responsive Styles */
+
+.insp-root {
+    height: 100vh;
+    overflow-y: auto;
+    font-family: "Century Gothic", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === HEADER === */
+.insp-header {
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.insp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.insp-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Engravers MT", serif;
+    letter-spacing: 2px;
+}
+
+.insp-subtitle {
+    border-left: 2px solid rgba(255,255,255,0.3);
+    padding-left: 15px;
+    font-size: 1.1rem;
+}
+
+.insp-header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Header circular icon buttons (matching user dashboard) */
+.insp-header-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.insp-header-btn:hover {
+    opacity: 0.7;
+}
+
+.insp-header-btn-circle {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    display: grid;
+    place-items: center;
+}
+
+.insp-header-btn-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 2px;
+    font-family: "Century Gothic", sans-serif;
+    white-space: nowrap;
+}
+
+/* User dropdown */
+.insp-user-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    min-width: 220px;
+    overflow: hidden;
+    z-index: 1000;
+    animation: inspFadeInUp 0.2s ease;
+}
+
+.insp-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "Century Gothic", sans-serif;
+    transition: background-color 0.2s;
+}
+
+.insp-dropdown-item:hover {
+    background-color: rgba(239, 83, 80, 0.1);
+}
+
+/* === MOBILE MENU === */
+.insp-mobile-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1100;
+    display: flex;
+}
+
+.insp-mobile-backdrop {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.insp-mobile-drawer {
+    position: relative;
+    width: 280px;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.insp-mobile-drawer-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insp-mobile-drawer-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.insp-mobile-drawer-footer {
+    padding: 20px;
+}
+
+.insp-mobile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Century Gothic", sans-serif;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+/* === MAIN CONTENT === */
+.insp-main {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.insp-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.insp-content-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.insp-content-header p {
+    margin: 0;
+}
+
+.insp-total-badge {
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* === TICKET GRID === */
+.insp-ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+.insp-ticket-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insp-ticket-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.insp-ticket-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.insp-severity-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.insp-ticket-details {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.insp-ticket-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.insp-ticket-date {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.insp-estimates {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.insp-est-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.insp-status-row {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.insp-status-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    min-width: 150px;
+}
+
+.insp-empty {
+    grid-column: 1 / -1;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+/* === ANIMATIONS === */
+@keyframes inspFadeInUp {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .insp-header {
+        padding: 12px 15px;
+    }
+
+    .insp-logo {
+        font-size: 1.4rem;
+    }
+
+    .insp-main {
+        padding: 15px;
+    }
+
+    .insp-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .insp-content-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .insp-ticket-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .insp-ticket-image {
+        height: 180px;
+    }
+
+    .insp-ticket-details {
+        padding: 15px;
+    }
+
+    .insp-status-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .insp-status-select {
+        width: 100%;
+    }
+
+    .insp-estimates {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .insp-estimates > div {
+        border-left: none !important;
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .insp-header {
+        padding: 10px 12px;
+    }
+
+    .insp-logo {
+        font-size: 1.2rem;
+    }
+
+    .insp-main {
+        padding: 10px;
+    }
+
+    .insp-ticket-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

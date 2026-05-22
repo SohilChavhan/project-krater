@@ -1,0 +1,13 @@
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['Potholes']
+
+roboflow:
+  workspace: sohil-chavhan
+  project: pothole-clzln-s0lmf
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/sohil-chavhan/pothole-clzln-s0lmf/dataset/1
