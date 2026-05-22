@@ -3185,7 +3185,7 @@ function App() {
         console.error("Failed to fetch context for AI:", dbError);
       }
       dbContext += `\n\nCRITICAL INSTRUCTION: The user's interface is currently set to ${language}. You MUST reply to the user entirely in ${language}. Do not respond in English unless the requested language is English.`;
-      const response = await fetch('http://127.0.0.1:8000/chat', {
+      const response = await fetch('https://twilllight-krater-ai-pothole-reporting-system.hf.space/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userText, context: dbContext })
@@ -3228,7 +3228,7 @@ function App() {
       formData.append('file', file);
       formData.append('location', selectedDistrict);
 
-      const response = await fetch('http://127.0.0.1:8000/analyze-image', {
+      const response = await fetch('https://twilllight-krater-ai-pothole-reporting-system.hf.space/analyze-image', {
         method: 'POST',
         body: formData,
       });
@@ -3257,7 +3257,7 @@ function App() {
         let finalImageUrl = null;
         if (processedImgBase64) {
           try {
-            const uploadRes = await fetch('http://127.0.0.1:8000/upload-image', {
+            const uploadRes = await fetch('https://twilllight-krater-ai-pothole-reporting-system.hf.space/upload-image', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ image_base64: processedImgBase64 })

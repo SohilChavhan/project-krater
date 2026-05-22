@@ -44,7 +44,7 @@ import pickle
 from keras.models import load_model
 
 print("Loading Budget Estimator AI...")
-budget_model = load_model('budget_estimator.keras')
+budget_model = load_model('budget_estimator.h5')
 
 with open('district_columns.pkl', 'rb') as f:
     district_columns = pickle.load(f)

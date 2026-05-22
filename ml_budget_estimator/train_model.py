@@ -1,7 +1,10 @@
 import pandas as pd
+# pyrefly: ignore [missing-import]
 import numpy as np
 import pickle
+# pyrefly: ignore [missing-import]
 from keras.models import Sequential
+# pyrefly: ignore [missing-import]
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 
@@ -40,6 +43,6 @@ model = Sequential([
 model.compile(optimizer='adam', loss='mae')
 model.fit(X_train, y_train, epochs=20, validation_data=(X_test, y_test), batch_size=32)
 
-model.save('budget_estimator.keras')
+model.save('budget_estimator.h5')
 print("Model saved to budget_estimator.keras!")
 print("Columns saved to district_columns.pkl! 🚀")
