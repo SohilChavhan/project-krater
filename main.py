@@ -52,6 +52,9 @@ print("Budget Estimator Ready!")
 
 
 groq_api_key = os.getenv("GROQ_API_KEY")
+print("MY GROQ KEY IS:", groq_api_key)
+if not groq_api_key:
+    raise ValueError("GROQ_API_KEY not found in .env file.")
 client = Groq(api_key=groq_api_key)
 
 app = FastAPI(title="Krater AI Engine")
