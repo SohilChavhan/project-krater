@@ -3408,7 +3408,8 @@ function App() {
       const newBotMsg = {
         id: Date.now(),
         sender: 'bot',
-        text: t("The ticket ") + "#" + nextTicketNumber + t(" has been assigned to your report.")
+        type: 'ticket_assignment', // We tell React what KIND of message this is
+        ticketNumber: nextTicketNumber // We just save the raw number!
       };
       const finalMsgs = [...updatedMsgs, newBotMsg];
       setMessages(finalMsgs);
@@ -4417,7 +4418,11 @@ function App() {
                     )}
 
                     {msg.text && <div style={{ fontSize: '1rem', lineHeight: '1.5' }}>{msg.text}</div>}
-
+                    {msg.type === 'ticket_assignment' && (
+                      <div style={{ fontSize: '1rem', lineHeight: '1.5' }}>
+                        {t("The ticket ")}#{msg.ticketNumber}{t(" has been assigned to your report.")}
+                      </div>
+                    )}
                     {msg.reportData && (
                       <div style={{ marginTop: '16px', backgroundColor: colors.panel, padding: '16px', borderRadius: '12px', border: `1px solid ${colors.border}` }}>
 
