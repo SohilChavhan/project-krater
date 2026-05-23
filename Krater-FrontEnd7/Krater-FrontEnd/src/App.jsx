@@ -3408,7 +3408,7 @@ function App() {
       const newBotMsg = {
         id: Date.now(),
         sender: 'bot',
-        text: `${t("The ticket ")}#${nextTicketNumber}${t(" has been assigned to your report.")}`
+        text: t("The ticket ") + "#" + nextTicketNumber + t(" has been assigned to your report.")
       };
       const finalMsgs = [...updatedMsgs, newBotMsg];
       setMessages(finalMsgs);
