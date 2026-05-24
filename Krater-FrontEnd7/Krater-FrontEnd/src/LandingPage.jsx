@@ -17,9 +17,9 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
         return () => document.removeEventListener('mousedown', handleClick);
     }, []);
 
-    
-    
-    
+
+
+
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -140,9 +140,9 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
         };
     }, []);
 
-    
-    
-    
+
+
+
     useEffect(() => {
         const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
@@ -192,9 +192,9 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
         };
     }, []);
 
-    
-    
-    
+
+
+
     useEffect(() => {
         const dict = translations[currentLang] || translations['en'];
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -205,16 +205,19 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
         });
     }, [currentLang]);
 
-    
-    
-    
+
+
+
     return (
         <div style={{ height: '100vh', overflowY: 'auto', backgroundColor: 'transparent', fontFamily: '"Outfit", sans-serif' }}>
             <canvas ref={canvasRef} id="fluid-canvas" style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}></canvas>
 
             <header id="site-header">
-                <div className="header-left">
-                    <img src="/logo.png" alt="Krater Logo" className="header-logo" id="header-logo" />
+                <div className="header-left" style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }}>
+                    <img src="/logo.png" alt="Krater Logo" className="header-logo" id="header-logo" style={{ width: '45px', height: 'auto' }} />
+                    <span style={{ fontSize: '2.5rem', fontWeight: 'bold', fontFamily: '"Engravers MT", serif', letterSpacing: '3px', color: '#0f172a' }}>
+                        KRATER
+                    </span>
                 </div>
                 <div className="header-right">
                     <select
@@ -242,7 +245,7 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
                     {user ? (
                         <div ref={userMenuRef} style={{ position: 'relative' }}>
                             <button className="landing-avatar-btn" onClick={() => setShowUserMenu(!showUserMenu)}>
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>
                             </button>
                             {showUserMenu && (
                                 <div className="landing-user-dropdown">
@@ -251,19 +254,19 @@ export default function LandingPage({ onGetStarted, user, userRole, onSignOut, o
                                         <div className="landing-dropdown-name">{user.displayName || 'User'}!</div>
                                     </div>
                                     <div className="landing-dropdown-item" onClick={() => { setShowUserMenu(false); onGoDashboard(); }}>
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                                         {userRole === 'citizen' ? 'Chatbox' : 'Dashboard'}
                                     </div>
                                     <div className="landing-dropdown-item" onClick={() => { setShowUserMenu(false); onAddAccount(); }}>
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="17" y1="11" x2="23" y2="11" /></svg>
                                         Add another account
                                     </div>
                                     <div className="landing-dropdown-item" onClick={() => { setShowUserMenu(false); onSwitchAccount(); }}>
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" /></svg>
                                         Switch Accounts
                                     </div>
                                     <div className="landing-dropdown-item signout" onClick={onSignOut}>
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" /></svg>
                                         Sign Out
                                     </div>
                                 </div>
